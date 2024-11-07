@@ -1,0 +1,10 @@
+CHIP Xnor{
+    IN a , b;
+    OUT out;
+    PARTS:
+    Nand(a=a , b=b , out=c);
+    Nand(a=a , b=c , out=d);
+    Nand(a=c , b=a , out=e);
+    Nand(a=d , b=e , out=f);
+    Nand(a=f , b=f , out=out);
+}
